@@ -57,12 +57,10 @@ class ParseMultiplePagesTask(app.Task):
             ParseXmlForLinksTask().run(links)
 
 
-# Пример выполнения задач
 if __name__ == '__main__':
     urls = [
         'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=1',
         'https://zakupki.gov.ru/epz/order/extendedsearch/results.html?fz44=on&pageNumber=2'
     ]
 
-    # Запуск задачи для обработки нескольких страниц
     ParseMultiplePagesTask().run(urls)
